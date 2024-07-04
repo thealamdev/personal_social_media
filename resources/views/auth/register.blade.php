@@ -57,7 +57,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 shadow-lg border border-sky-400 rounded-lg m-auto p-5">
-                <header class="text-center mb-5">
+                <header class="text-center mb-3">
                     <h1 class="h3">Welcome Dear</h1>
                     <p>Let's began a new journey with us.</p>
                 </header>
@@ -78,12 +78,23 @@
 
                     <div class="form-group">
                         <label for="email">Email</label> <span class="text-danger">*</span>
-                        <input type="email" class="form-control border rounded-lg bg-transparent" placeholder="Enter your email">
+                        <input type="email" name="email" class="form-control border rounded-lg bg-transparent" placeholder="Enter your email">
                         <x-input-error :messages="$errors->get('email')" class="mt-2" />
                     </div>
+
+                    <div class="form-group">
+                        <label for="mobile">Mobile</label> <span class="text-danger">*</span>
+                        <input type="number" name="mobile" class="form-control border rounded-lg bg-transparent" placeholder="Enter your mobile">
+                    </div>
+
                     <div class="form-group">
                         <label for="password">New Password</label> <span class="text-danger">*</span>
-                        <input type="password" class="form-control border rounded-lg bg-transparent" placeholder="Enter password">
+                        <input type="password" name="password" class="form-control border rounded-lg bg-transparent" placeholder="Enter password">
+                        <x-input-error :messages="$errors->get('password')" class="mt-2" />
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Confirm Password</label> <span class="text-danger">*</span>
+                        <input type="password" name="password_confirmation" class="form-control border rounded-lg bg-transparent" placeholder="Enter password">
                         <x-input-error :messages="$errors->get('password')" class="mt-2" />
                     </div>
 
