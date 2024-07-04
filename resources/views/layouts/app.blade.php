@@ -267,62 +267,28 @@
                         </div>
                         <!-- 4th sotry -->
                         <!-- <div class="create_story">
-                                                                            <div class="story_img">
-                                                                                <img src="images/g-3.jpg" alt="g-3">
-                                                                                <div class="story_overlay">
-                                                                                     <div class="overlay_text">
-                                                                                        <div class="story_profile">
-                                                                                            <img src="{{ asset('assets/images/logo.png') }}" alt="logo">
+                                                                                    <div class="story_img">
+                                                                                        <img src="images/g-3.jpg" alt="g-3">
+                                                                                        <div class="story_overlay">
+                                                                                             <div class="overlay_text">
+                                                                                                <div class="story_profile">
+                                                                                                    <img src="{{ asset('assets/images/logo.png') }}" alt="logo">
+                                                                                                </div>
+                                                                                                
+                                                                                                 <div class="story_profile_name">
+                                                                                                    <p>Md.Shah Alam</p>
+                                                                                                 </div>
+                                                                                             </div>
                                                                                         </div>
-                                                                                        
-                                                                                         <div class="story_profile_name">
-                                                                                            <p>Md.Shah Alam</p>
-                                                                                         </div>
-                                                                                     </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div> -->
+                                                                                    </div>
+                                                                                </div> -->
                         <!-- end of story -->
 
 
 
                         <!-- my day section end -->
                         <!-- post main start -->
-                        <div class="user_profile_post_main">
-                            <div class="user_profile">
-                                <div class="post_profile">
-                                    <img src="{{ asset('assets/images/logo.png') }}" alt="logo">
-                                </div>
-
-                                <div class="post_name">
-                                    <h3>Md. Shah Alam</h3>
-                                    <p>12 july , 2022</p>
-                                </div>
-                            </div>
-
-                            <div class="post_mind">
-                                <form action="">
-                                    <input type="text" placeholder="What's  on your mind?">
-                                </form>
-                                <div class="under_line">
-
-                                </div>
-                            </div>
-
-                            <div class="other_post">
-                                <div class="other_item">
-                                    <h3>Live Video</h3>
-                                </div>
-
-                                <div class="other_item">
-                                    <h3>Video/Image</h3>
-                                </div>
-
-                                <div class="other_item">
-                                    <h3>Files/Others</h3>
-                                </div>
-                            </div>
-                        </div>
+                        {{ $slot }}
 
 
 
@@ -531,6 +497,9 @@
         <!-- project body section end -->
     @endauth
 
+    @guest
+        @include('auth.login')
+    @endguest
     <!-- bootstrap js link -->
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
     <!-- custom js link -->
