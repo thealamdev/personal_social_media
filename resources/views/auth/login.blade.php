@@ -3,55 +3,66 @@
      <!-- Session Status -->
      <x-auth-session-status class="mb-4" :status="session('status')" />
 
-     {{-- <form method="POST" action="{{ route('login') }}">
-        @csrf
-
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
-        </div>
-
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="current-password" />
-
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
-
-        <!-- Remember Me -->
-        <div class="block mt-4">
-            <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox" class="rounded dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800" name="remember">
-                <span class="ms-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Remember me') }}</span>
-            </label>
-        </div>
-
-        <div class="flex items-center justify-end mt-4">
-            @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a>
-            @endif
-
-            <x-primary-button class="ms-3">
-                {{ __('Log in') }}
-            </x-primary-button>
-        </div>
-    </form> --}}
-
      <div class="container">
-         <div class="row shadow">
-             <div class="col-lg-6 p-5">
-                <h1 class="h3">Welcome Back</h1>
+         <div class="row shadow-lg border border-sky-400 rounded-lg h-full">
+             <div class="col-lg-6 px-5 pt-5">
+                 <header class="text-center mb-5">
+                     <h1 class="h3">Welcome Dear</h1>
+                     <p>Let's began a new journey with us.</p>
+                 </header>
+                 <!-- From start !-->
+                 <form method="POST" action="{{ route('login') }}">
+                     @csrf
+
+                     <div class="form-group">
+                         <label for="email">Email</label> <span class="text-danger">*</span>
+                         <input type="email" class="form-control border rounded-lg bg-transparent" placeholder="Enter your email">
+                         <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                     </div>
+                     <div class="form-group">
+                         <label for="password">Password</label> <span class="text-danger">*</span>
+                         <input type="password" class="form-control border rounded-lg bg-transparent" placeholder="Enter password">
+                         <x-input-error :messages="$errors->get('password')" class="mt-2" />
+                     </div>
+
+                     <div class="d-flex justify-content-between">
+                         <label for="remember_me" class="inline-flex items-center">
+                             <input id="remember_me" type="checkbox" class="rounded dark:bg-gray-100 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800" name="remember">
+                             <span class="ms-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Remember me') }}</span>
+                         </label>
+
+                         @if (Route::has('password.request'))
+                             <a class="underline text-sm text-gray-600 dark:text-gray-400 rounded-md" href="{{ route('password.request') }}">
+                                 {{ __('Forgot your password?') }}
+                             </a>
+                         @endif
+                     </div>
+
+                     <button type="submit" class="btn btn-primary w-100 mt-3">Login</button>
+                 </form>
+                 <!-- From end !-->
+
+                 <!-- Registration start !-->
+                 <div class="row mt-3 d-flex align-items-center">
+                     <div class="col-lg-4">
+                         <hr>
+                     </div>
+                     <div class="col-lg-4 text-center">Or, login with</div>
+                     <div class="col-lg-4">
+                         <hr>
+                     </div>
+                 </div>
+
+                 <div class="mt-3">
+                     <button class="w-100 text-center bg-transparent border border-slate-600 rounded-lg"> <img src="{{ asset('assets/images/logo/google-logo.png') }}" alt="logo" class="d-inline"> Sign up with Google</button>
+                 </div>
+
+                 <div class="mt-3 text-center">
+                     <span>Don't have an account ? <a class="text-primary" href="{{ route('register') }}">Register here</a></span>
+                 </div>
+                 <!-- Registration end !-->
              </div>
-             <div class="col-lg-6 w-100 h-100 border-left">
+             <div class="col-lg-6 w-100 border-left py-5">
                  <img src="{{ asset('assets/images/auth/login.svg') }}" alt="">
              </div>
          </div>
