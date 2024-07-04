@@ -16,12 +16,12 @@
 
                      <div class="form-group">
                          <label for="email">Email</label> <span class="text-danger">*</span>
-                         <input type="email" class="form-control border rounded-lg bg-transparent" placeholder="Enter your email">
+                         <input type="email" name="email" class="form-control border rounded-lg bg-transparent" placeholder="Enter your email">
                          <x-input-error :messages="$errors->get('email')" class="mt-2" />
                      </div>
                      <div class="form-group">
                          <label for="password">Password</label> <span class="text-danger">*</span>
-                         <input type="password" class="form-control border rounded-lg bg-transparent" placeholder="Enter password">
+                         <input type="password" name="password" class="form-control border rounded-lg bg-transparent" placeholder="Enter password">
                          <x-input-error :messages="$errors->get('password')" class="mt-2" />
                      </div>
 

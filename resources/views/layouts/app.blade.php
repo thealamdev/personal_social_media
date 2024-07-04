@@ -20,9 +20,9 @@
         <!-- project body section start -->
         <section id="project_body">
             <div class="project_body_main">
-                <div class="row">
+                <div class="row px-5">
                     <!-- body left -->
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 w-100">
                         <div class="body_left">
                             <div class="left_item">
                                 <ul>
@@ -184,7 +184,6 @@
 
                                 </div>
                             </div>
-
                         </div>
                     </div>
 

@@ -100,21 +100,26 @@ body {
     -o-border-radius: 50%;
 }
 
+.body_left{
+    position: absolute;
+    width: 400px;
+    overflow: hidden;
+}
+
 
 
 /* left body section start */
 .left_item {
+    width: 100%;
     position: fixed;
     height: 100vh;
     overflow: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
     margin-bottom: 50px;
 }
 
 ::-webkit-scrollbar {
     width: 10px;
-
-
 }
 
 ::-webkit-scrollbar-track {
@@ -409,11 +414,11 @@ body {
  
  }
 .right_item_main {
-    max-width: 260px;
+    width: 100%;
     position: fixed;
     height: 100vh;
     overflow: hidden;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     margin-top: 10px;
     background: #fff;
     padding: 10px;
