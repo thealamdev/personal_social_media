@@ -17,12 +17,13 @@ return new class extends Migration
             $table->string('last_name');
             $table->string('mobile')->unique();
             $table->string('email')->unique();
-            $table->string('recovery_email')->unique();
+            $table->string('recovery_email')->unique()->nullable();
             $table->date('dob');
             $table->string('gender');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
+            $table->softDeletes();
             $table->timestamps();
         });
 

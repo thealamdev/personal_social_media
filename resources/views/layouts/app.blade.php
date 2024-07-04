@@ -268,21 +268,21 @@
                         </div>
                         <!-- 4th sotry -->
                         <!-- <div class="create_story">
-                                                                    <div class="story_img">
-                                                                        <img src="images/g-3.jpg" alt="g-3">
-                                                                        <div class="story_overlay">
-                                                                             <div class="overlay_text">
-                                                                                <div class="story_profile">
-                                                                                    <img src="{{ asset('assets/images/logo.png') }}" alt="logo">
+                                                                            <div class="story_img">
+                                                                                <img src="images/g-3.jpg" alt="g-3">
+                                                                                <div class="story_overlay">
+                                                                                     <div class="overlay_text">
+                                                                                        <div class="story_profile">
+                                                                                            <img src="{{ asset('assets/images/logo.png') }}" alt="logo">
+                                                                                        </div>
+                                                                                        
+                                                                                         <div class="story_profile_name">
+                                                                                            <p>Md.Shah Alam</p>
+                                                                                         </div>
+                                                                                     </div>
                                                                                 </div>
-                                                                                
-                                                                                 <div class="story_profile_name">
-                                                                                    <p>Md.Shah Alam</p>
-                                                                                 </div>
-                                                                             </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div> -->
+                                                                            </div>
+                                                                        </div> -->
                         <!-- end of story -->
 
 
@@ -531,43 +531,6 @@
         </section>
         <!-- project body section end -->
     @endauth
-
-    @guest
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6" style="margin-top: 200px">
-                    <h2 style="font-size: 40px;color:#0866ff;font-weight:600">facebook</h2>
-                    <p style="font-size: 28px;line-height:32px;padding-top:5px">Facebook helps you connect and share with
-                        the people in your life.</p>
-                </div>
-                <div class="col-lg-6" style="margin-top: 150px;">
-                    <div class="card">
-                        <div class="card-body">
-                            <form action="{{ route('login') }}" method="POST">
-                                @csrf
-                                <div class="mt-3">
-                                    <input type="text" name="email" class="form-control" placeholder="enter email or mobile">
-                                </div>
-                                <div class="mt-3">
-                                    <input name="password" type="password" class="form-control" placeholder="enter password">
-                                </div>
-                                <div class="mt-3">
-                                    <button class="w-100 btn btn-primary">Login</button>
-                                </div>
-                                <div class="my-3 text-center">
-                                    <a href="#">Forgot password?</a>
-                                </div>
-                                <hr>
-                                <div class="text-center">
-                                    <a class="w-50 btn btn-success">Create New Account</a>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    @endguest
 
     <!-- bootstrap js link -->
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>

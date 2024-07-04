@@ -1,5 +1,5 @@
 @auth
-    Home page
+    @extends('layouts.app')
 @endauth
 
 @guest

@@ -93,14 +93,14 @@
                         <x-input-error :messages="$errors->get('password')" class="mt-2" />
                     </div>
                     <div class="form-group">
-                        <label for="password">Confirm Password</label> <span class="text-danger">*</span>
+                        <label for="password_confirmation">Confirm Password</label> <span class="text-danger">*</span>
                         <input type="password" name="password_confirmation" class="form-control border rounded-lg bg-transparent" placeholder="Enter password">
-                        <x-input-error :messages="$errors->get('password')" class="mt-2" />
+                        <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
                     </div>
 
                     <div class="form-group">
                         <label for="dob">Date of Birth</label> <span class="text-danger">*</span>
-                        <input type="date" class="form-control border rounded-lg bg-transparent">
+                        <input type="date" name="dob" class="form-control border rounded-lg bg-transparent">
                     </div>
 
                     <div class="from-group">
@@ -126,7 +126,7 @@
                 <!-- From end !-->
 
                 <div class="mt-3 text-center">
-                    <span>Have an account ? <a class="text-primary" href="{{ route('login') }}">Login now</a></span>
+                    <span>Already registered? <a class="text-primary" href="{{ route('login') }}">Login now</a></span>
                 </div>
                 <!-- Registration end !-->
             </div>
