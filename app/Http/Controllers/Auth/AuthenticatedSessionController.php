@@ -27,7 +27,6 @@ class AuthenticatedSessionController extends Controller
     {
         $request->authenticate();
         $request->session()->regenerate();
-        $active_logs = Session::create();
 
         return redirect()->intended(route('welcome', absolute: false));
     }
