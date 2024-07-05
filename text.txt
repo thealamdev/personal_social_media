@@ -1,1 +1,0 @@
-login page color = #3FBCC5;
