@@ -1,4 +1,4 @@
-<x-guest-layout>
+{{-- <x-guest-layout>
     <div class="mb-4 text-sm text-gray-600 dark:text-gray-400">
         {{ __('Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you didn\'t receive the email, we will gladly send you another.') }}
     </div>
@@ -28,9 +28,9 @@
             </button>
         </form>
     </div>
-</x-guest-layout>
+</x-guest-layout> --}}
 
-{{-- <x-guest-layout>
+<x-guest-layout>
     <div class="container">
         <div class="row">
             <div class="col-lg-6 shadow-lg border border-sky-400 rounded-lg m-auto p-5">
@@ -48,31 +48,17 @@
 
                 <form method="POST" action="{{ route('verification.send') }}">
                     @csrf
-
-                    <!-- Password Reset Token -->
-                    <input type="hidden" name="token" value="{{ $request->route('token') }}">
-
-                    <div class="form-group">
-                        <label for="email">Email</label> <span class="text-danger">*</span>
-                        <input type="email" name="email" class="form-control border rounded-lg bg-transparent" placeholder="Enter your email">
-                        <x-input-error :messages="$errors->get('email')" class="mt-2" />
-                    </div>
-
-                    <div class="form-group">
-                        <label for="password">New Password</label> <span class="text-danger">*</span>
-                        <input type="password" name="password" class="form-control border rounded-lg bg-transparent" placeholder="Enter password">
-                        <x-input-error :messages="$errors->get('password')" class="mt-2" />
-                    </div>
-
-                    <div class="form-group">
-                        <label for="password_confirmation">Confirm Password</label> <span class="text-danger">*</span>
-                        <input type="password" name="password_confirmation" class="form-control border rounded-lg bg-transparent" placeholder="Enter password">
-                        <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
-                    </div>
-
                     <button type="submit" class="btn btn-primary w-100 mt-3">Resend Verification Email</button>
+                </form>
+
+                <form method="POST" action="{{ route('logout') }}" class="mt-4">
+                    @csrf
+
+                    <button type="submit" class="btn btn-danger w-100 m-auto">
+                        {{ __('Log Out') }}
+                    </button>
                 </form>
             </div>
         </div>
     </div>
-</x-guest-layout> --}}
+</x-guest-layout>
