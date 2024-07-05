@@ -3,9 +3,6 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// })->name('welcome');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -19,4 +16,4 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__ . '/auth.php';
 
-Route::get('/',App\Livewire\HomeComponent::class)->name('welcome');
+Route::get('/', App\Livewire\HomeComponent::class)->middleware(['verified'])->name('welcome');
