@@ -17,12 +17,9 @@ Route::middleware('auth')->group(function () {
 require __DIR__ . '/auth.php';
 
 Route::get('/', App\Livewire\HomeComponent::class)->middleware(['verified'])->name('welcome');
-
-
 Route::get('/auth/redirect', function () {
     return Socialite::driver('google')->redirect();
 });
-
 Route::get('/auth/callback', function () {
     $user = Socialite::driver('google')->user();
 
