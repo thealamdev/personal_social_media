@@ -14,6 +14,7 @@ class AuthenticatedSessionController extends Controller
 {
     /**
      * Display the login view.
+     * @return View
      */
     public function create(): View
     {
@@ -22,6 +23,8 @@ class AuthenticatedSessionController extends Controller
 
     /**
      * Handle an incoming authentication request.
+     * @param LoginRequest $request
+     * @return RedirectResponse
      */
     public function store(LoginRequest $request): RedirectResponse
     {
@@ -42,15 +45,14 @@ class AuthenticatedSessionController extends Controller
 
     /**
      * Destroy an authenticated session.
+     * @param Request $request 
+     * @return RedirectResponse
      */
     public function destroy(Request $request): RedirectResponse
     {
         Auth::guard('web')->logout();
-
         $request->session()->invalidate();
-
         $request->session()->regenerateToken();
-
         return redirect('/');
     }
 }
