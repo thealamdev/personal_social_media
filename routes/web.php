@@ -32,6 +32,4 @@ Route::get('/auth/redirect', function () {
 });
 Route::get('/auth/callback', function () {
     $user = Socialite::driver('google')->user();
-
-    // $user->token
 });
