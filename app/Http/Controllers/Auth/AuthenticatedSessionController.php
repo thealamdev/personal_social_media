@@ -30,13 +30,21 @@ class AuthenticatedSessionController extends Controller
     {
         $request->authenticate();
         $request->session()->regenerate();
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, "https://api.ipify.org?format=json");
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        $response = curl_exec($ch);
+        curl_close($ch);
+        $data = json_decode($response);
+        $data->ip;
+
         DB::table('sessions')->insert(
             [
                 'id' => uniqid(),
                 'user_id' => $request->user()->id,
-                'ip_address' => $request->ip(),
+                'ip_address' => $data->ip,
                 'user_agent' => $request->userAgent(),
-                'payload' => 'Activity log',
+                'payload' => 'login',
                 'last_activity' => time(),
             ]
         );
