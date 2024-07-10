@@ -1,8 +1,12 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
+use Illuminate\Http\Client\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Route;
 use Laravel\Socialite\Facades\Socialite;
+use App\Http\Controllers\ProfileController;
+use Illuminate\Session\Middleware\AuthenticateSession;
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -15,6 +19,12 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__ . '/auth.php';
+
+Route::middleware(['auth', 'auth.session'])->group(function () {
+    Route::get('logoutAll', function (Request $request) {
+        Auth::logoutOtherDevices('12345678');
+    });
+});
 
 Route::get('/', App\Livewire\HomeComponent::class)->middleware(['verified'])->name('welcome');
 Route::get('/auth/redirect', function () {
