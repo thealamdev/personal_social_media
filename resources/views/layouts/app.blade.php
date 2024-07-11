@@ -1,509 +1,403 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>facebook</title>
-    <!-- bootstrap css link -->
-    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
-    <!-- custom css link -->
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Facebook Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
-    @auth
-        @include('layouts.hooks.header')
-
-        <!-- project body section start -->
-        <section id="project_body">
-            <div class="project_body_main">
-                <div class="row px-5">
-                    <!-- body left -->
-                    <div class="col-lg-3 w-100">
-                        <div class="body_left">
-                            <div class="left_item">
-                                <ul>
-                                    <li>
-                                        <a href="#">latest News</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#">Friends</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#">Grouup</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#">Marketplace</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#">Watch</a>
-                                    </li>
-
-                                    <div class="see_more">
-                                        <p><a href="#">See More</a></p>
-                                    </div>
-
-                                    <div class="under_line mt-4">
-
-                                    </div>
-
-                                </ul>
-
-                                <div class="shortcuts">
-                                    <h3>Your Shortcuts</h3>
-                                    <!-- 1st shortcut -->
-                                    <div class="shortcut_item">
-                                        <div class="shortcut_img">
-                                            <img src="{{ asset('assets/images/logo.png') }}" alt="logo">
-                                        </div>
-
-                                        <div class="shortcut_text">
-                                            <p>Web Developers</p>
-                                        </div>
-                                    </div>
-                                    <!-- 2nd shortcut -->
-                                    <div class="shortcut_item">
-                                        <div class="shortcut_img">
-                                            <img src="{{ asset('assets/images/post-1.jpg') }}" alt="post-1">
-                                        </div>
-
-                                        <div class="shortcut_text">
-                                            <p>Web Design course</p>
-                                        </div>
-                                    </div>
-                                    <!-- 3rd shortcut -->
-                                    <div class="shortcut_item">
-                                        <div class="shortcut_img">
-                                            <img src="{{ asset('assets/images/post-2.jpg') }}" alt="post-2">
-                                        </div>
-
-                                        <div class="shortcut_text">
-                                            <p>Full Stack Development</p>
-                                        </div>
-                                    </div>
-                                    <!-- 4th shortcut -->
-                                    <div class="shortcut_item">
-                                        <div class="shortcut_img">
-                                            <img src="{{ asset('assets/images/post-1.jpg') }}" alt="post-1">
-                                        </div>
-
-                                        <div class="shortcut_text">
-                                            <p>Website Experts</p>
-                                        </div>
-                                    </div>
-
-                                    <!-- extra -->
-                                    <!-- 1st shortcut -->
-                                    <div class="shortcut_item">
-                                        <div class="shortcut_img">
-                                            <img src="{{ asset('assets/images/logo.png') }}" alt="logo">
-                                        </div>
-
-                                        <div class="shortcut_text">
-                                            <p>Web Developers</p>
-                                        </div>
-                                    </div>
-                                    <!-- 2nd shortcut -->
-                                    <div class="shortcut_item">
-                                        <div class="shortcut_img">
-                                            <img src="{{ asset('assets/images/post-1.jpg') }}" alt="post-1">
-                                        </div>
-
-                                        <div class="shortcut_text">
-                                            <p>Web Design course</p>
-                                        </div>
-                                    </div>
-                                    <!-- 3rd shortcut -->
-                                    <div class="shortcut_item">
-                                        <div class="shortcut_img">
-                                            <img src="{{ asset('assets/images/post-2.jpg') }}" alt="post-2">
-                                        </div>
-
-                                        <div class="shortcut_text">
-                                            <p>Full Stack Development</p>
-                                        </div>
-                                    </div>
-                                    <!-- 4th shortcut -->
-                                    <div class="shortcut_item">
-                                        <div class="shortcut_img">
-                                            <img src="{{ asset('assets/images/post-1.jpg') }}" alt="post-1">
-                                        </div>
-
-                                        <div class="shortcut_text">
-                                            <p>Website Experts</p>
-                                        </div>
-                                    </div>
-                                    <!-- 1st shortcut -->
-                                    <div class="shortcut_item">
-                                        <div class="shortcut_img">
-                                            <img src="{{ asset('assets/images/logo.png') }}" alt="logo">
-                                        </div>
-
-                                        <div class="shortcut_text">
-                                            <p>Web Developers</p>
-                                        </div>
-                                    </div>
-                                    <!-- 2nd shortcut -->
-                                    <div class="shortcut_item">
-                                        <div class="shortcut_img">
-                                            <img src="{{ asset('assets/images/post-1.jpg') }}" alt="post-1">
-                                        </div>
-
-                                        <div class="shortcut_text">
-                                            <p>Web Design course</p>
-                                        </div>
-                                    </div>
-                                    <!-- 3rd shortcut -->
-                                    <div class="shortcut_item">
-                                        <div class="shortcut_img">
-                                            <img src="{{ asset('assets/images/post-2.jpg') }}" alt="post-2">
-                                        </div>
-
-                                        <div class="shortcut_text">
-                                            <p>Full Stack Development</p>
-                                        </div>
-                                    </div>
-                                    <!-- 4th shortcut -->
-                                    <div class="shortcut_item">
-                                        <div class="shortcut_img">
-                                            <img src="{{ asset('assets/images/post-1.jpg') }}" alt="post-1">
-                                        </div>
-
-                                        <div class="shortcut_text">
-                                            <p>Website Experts</p>
-                                        </div>
-                                    </div>
-
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- body middle -->
-                    <div class="col-lg-6 pl-0 pr-0">
-                        <!-- my day section start -->
-                        <div class="my_day_main">
-                            <!-- create myday -->
-                            <div class="create_story">
-                                <div class="story_img">
-                                    <img src="images/g-3.jpg" alt="g-3">
-                                    <div class="story_overlay">
-                                        <div class="overlay_text">
-                                            <div class="plus_icon">
-                                                <h1>+</h1>
-                                            </div>
-
-                                            <div class="overlay_content">
-                                                <p>Fast Story</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- story 1 -->
-
-                            <div class="create_story">
-                                <div class="story_img">
-                                    <img src="images/g-3.jpg" alt="g-3">
-                                    <div class="story_overlay">
-                                        <div class="overlay_text">
-                                            <div class="story_profile">
-                                                <img src="{{ asset('assets/images/logo.png') }}" alt="logo">
-                                            </div>
-                                        </div>
-
-                                        <div class="story_profile_name">
-                                            <p>Md.Shah</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- 2nd story -->
-
-                            <div class="create_story">
-                                <div class="story_img">
-                                    <img src="images/g-4.jpg" alt="g-3">
-                                    <div class="story_overlay">
-                                        <div class="overlay_text">
-                                            <div class="story_profile">
-                                                <img src="images/g-3.jpg" alt="logo">
-                                            </div>
-
-                                        </div>
-
-                                        <div class="story_profile_name">
-                                            <p>Md.Mehedi Hassan</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 3rd story -->
-                            <div class="create_story">
-                                <div class="story_img">
-                                    <img src="images/g-5.jpg" alt="g-3">
-                                    <div class="story_overlay">
-                                        <div class="overlay_text">
-                                            <div class="story_profile">
-                                                <img src="images/g-4.jpg" alt="logo">
-                                            </div>
-                                        </div>
-
-                                        <div class="story_profile_name">
-                                            <p>Md.Sajjat Hossain</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 4th sotry -->
-                        <!-- <div class="create_story">
-                                                                                    <div class="story_img">
-                                                                                        <img src="images/g-3.jpg" alt="g-3">
-                                                                                        <div class="story_overlay">
-                                                                                             <div class="overlay_text">
-                                                                                                <div class="story_profile">
-                                                                                                    <img src="{{ asset('assets/images/logo.png') }}" alt="logo">
-                                                                                                </div>
-                                                                                                
-                                                                                                 <div class="story_profile_name">
-                                                                                                    <p>Md.Shah Alam</p>
-                                                                                                 </div>
-                                                                                             </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div> -->
-                        <!-- end of story -->
-
-
-
-                        <!-- my day section end -->
-                        <!-- post main start -->
-                        {{ $slot }}
-
-
-
-
-
-                        <!-- 1st post -->
-                        <div class="middle_post_main">
-                            <div class="post_img_main">
-                                <div class="post_profile">
-                                    <img src="{{ asset('assets/images/logo.png') }}" alt="logo">
-                                </div>
-
-                                <div class="post_name">
-                                    <h3>Md. Shah Alam</h3>
-                                    <p>12 july , 2022</p>
-                                </div>
-                            </div>
-
-                            <div class="post_details">
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident ipsam sapiente
-                                    aliquam minus. Animi incidunt possimus hic magnam voluptas dolores.</p>
-                            </div>
-
-                            <div class="post_img">
-                                <img src="{{ asset('assets/images/post-1.jpg') }}" alt="post-1">
-                            </div>
-                        </div>
-
-                        <!-- 2nd post  -->
-
-                        <div class="middle_post_main">
-                            <div class="post_img_main">
-                                <div class="post_profile">
-                                    <img src="{{ asset('assets/images/logo.png') }}" alt="logo">
-                                </div>
-
-                                <div class="post_name">
-                                    <h3>Md. Shah Alam</h3>
-                                    <p>12 july , 2022</p>
-                                </div>
-                            </div>
-
-                            <div class="post_details">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus dolorem alias
-                                    praesentium illo, vel molestias quas nisi provident ipsum animi, mollitia voluptate
-                                    aliquid corrupti sequi labore.</p>
-                            </div>
-
-                            <div class="post_img">
-                                <img src="{{ asset('assets/images/post-2.jpg') }}" alt="post-2">
-                            </div>
-                        </div>
-                        <!-- 3rd post -->
-                        <div class="middle_post_main">
-                            <div class="post_img_main">
-                                <div class="post_profile">
-                                    <img src="{{ asset('assets/images/logo.png') }}" alt="logo">
-                                </div>
-
-                                <div class="post_name">
-                                    <h3>Md. Sajjat</h3>
-                                    <p>6 May , 2012</p>
-                                </div>
-                            </div>
-
-                            <div class="post_details">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum laboriosam,
-                                    numquam tempore doloribus non dolore quae quaerat voluptas minima iusto beatae animi
-                                    voluptates. Molestiae, odio quisquam voluptatum aut nostrum aliquid nihil atque
-                                    quasi. Id, voluptatum.</p>
-                            </div>
-
-                            <div class="post_img">
-                                <img src="images/g-4.jpg" alt="g-4">
-                            </div>
-                        </div>
-                        <!-- end of middle section -->
-                    </div>
-                    <!-- right body -->
-                    <div class="col-lg-3 pr-0">
-                        <div class="right_body">
-                            <div class="right_item_main">
-                                <div class="right_item_header">
-                                    <h3>Events</h3>
-                                    <a href="#">See All</a>
-                                </div>
-                                <!-- 1st sedule -->
-                                <div class="right_sedule">
-                                    <div class="sedule_date">
-                                        <div class="date">
-                                            <h3>15</h3>
-                                        </div>
-                                        <div class="week">
-                                            <p>Week</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="sedule_details">
-                                        <h3>Social Media</h3>
-                                        <p>Panthopath/Dhaka</p>
-                                        <a href="#">More info</a>
-                                    </div>
-                                </div>
-                                <!-- 2nd sedule -->
-                                <div class="right_sedule">
-                                    <div class="sedule_date">
-                                        <div class="date">
-                                            <h3>22</h3>
-                                        </div>
-                                        <div class="week">
-                                            <p>Week</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="sedule_details">
-                                        <h3> Mobile Marketing</h3>
-                                        <p>Agarganj/Dhaka</p>
-                                        <a href="#">More info</a>
-                                    </div>
-                                </div>
-
-                                <!-- Advertisement part -->
-
-                                <div class="right_item_header mt-3">
-                                    <h3>Advertisement</h3>
-                                    <a href="#">Close</a>
-                                </div>
-
-                                <div class="advertisement_photo">
-                                    <img src="images/g-3.jpg" alt="g-3" class="w-100">
-                                </div>
-
-                                <!-- conversation part -->
-                                <div class="right_item_header mt-3">
-                                    <h3>Conversation</h3>
-                                    <a href="#">Close Chats</a>
-                                </div>
-
-
-                                <div class="conversation_main">
-                                    <!-- 1st item -->
-                                    <div class="conversation_item">
-                                        <div class="con_img">
-                                            <img src="{{ asset('assets/images/logo.png') }}" alt="logo">
-                                        </div>
-                                        <div class="con_name">
-                                            <p> Md. Mehedi Hasan</p>
-                                        </div>
-                                    </div>
-
-                                    <!-- 2nd item -->
-
-                                    <div class="conversation_item">
-                                        <div class="con_img">
-                                            <img src="images/g-9.jpg" alt="logo">
-                                        </div>
-                                        <div class="con_name">
-                                            <p> Md. Mehedi Hasan</p>
-                                        </div>
-                                    </div>
-
-                                    <!-- 3rd item -->
-
-                                    <div class="conversation_item">
-                                        <div class="con_img">
-                                            <img src="images/g-7.jpg" alt="g-7">
-                                        </div>
-                                        <div class="con_name">
-                                            <p> Md. Mehedi Hasan</p>
-                                        </div>
-                                    </div>
-                                    <!-- 4th item -->
-                                    <div class="conversation_item">
-                                        <div class="con_img">
-                                            <img src="images/g-6.jpg" alt="g-6">
-                                        </div>
-                                        <div class="con_name">
-                                            <p> Md. Mehedi Hasan</p>
-                                        </div>
-                                    </div>
-                                    <!-- 5th item -->
-                                    <div class="conversation_item">
-                                        <div class="con_img">
-                                            <img src="images/g-5.jpg" alt="g-5">
-                                        </div>
-                                        <div class="con_name">
-                                            <p> Md. Mehedi Hasan</p>
-                                        </div>
-                                    </div>
-                                    <!-- 6th item -->
-                                    <div class="conversation_item">
-                                        <div class="con_img">
-                                            <img src="images/g-4.jpg" alt="g-4">
-                                        </div>
-                                        <div class="con_name">
-                                            <p> Md. Mehedi Hasan</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <div class="shadow px-3">
+        <nav class="d-flex justify-content-between align-items-center py-2 bg-white">
+            <div class="nav-left d-flex justify-content-between align-items-center">
+                <div class="nav-logo">
+                    <img src="assets/icons/fb.png" alt="" width="40px">
+                </div>
+                <div class="nav-search">
+                    <i class="las la-search"></i>
+                    <input type="text" placeholder="Search Facebook" class="input-nav-search">
                 </div>
             </div>
-        </section>
-        <!-- project body section end -->
-    @endauth
+            <div class="nav-center d-flex justify-content-between align-items-center">
+                <a href="#" class="active"><i class="fa-solid fa-house activeIcon"></i></a>
+                <a href="#"><i class="fa-solid fa-user-group"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="nav-right d-flex justify-content-between align-items-center">
+                <a href="#" class="d-flex justify-content-center align-items-center"><i class="las la-bars"></i></a>
+                <a href="#" class="d-flex justify-content-center align-items-center"><i
+                        class="fa-brands fa-facebook-messenger"></i></a>
+                <a href="#" class="d-flex justify-content-center align-items-center"><i class="las la-bell"></i></a>
+                <img src="assets/images/profile.jpg" alt="profile" width="40px" height="40px"
+                    style="border-radius: 50%;">
+            </div>
+        </nav>
+    </div>
 
-    @guest
-        @include('auth.login')
-    @endguest
-    <!-- bootstrap js link -->
-    <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
-    <!-- custom js link -->
-    <script src="{{ asset('assets/js/script.js') }}"></script>
+    <main class="d-flex justify-content-between">
+        <div class="left-sidebar">
+            <div class="services">
+                <a class="left-item d-flex align-items-center p-2 text-dark">
+                    <img src="assets/images/profile.jpg" alt="" width="35" height="35" style="border-radius: 50%;">
+                    <p class="ps-2 fw-bold fs-6">Shah Alam</p>
+                </a>
+                <a class="left-item d-flex align-items-center p-2 text-dark">
+                    <img src="assets/icons/friends.png" alt="" width="35" height="35">
+                    <p class="ps-2 fw-bold fs-6">Friends</p>
+                </a>
+                <a class="left-item d-flex align-items-center p-2 text-dark">
+                    <img src="assets/icons/memories.png" alt="" width="35" height="35">
+                    <p class="ps-2 fw-bold fs-6">Memories</p>
+                </a>
+                <a class="left-item d-flex align-items-center p-2 text-dark">
+                    <img src="assets/icons/save.png" alt="" width="35" height="35"">
+                    <p class=" ps-2 fw-bold fs-6">Save</p>
+                </a>
+                <a class="left-item d-flex align-items-center p-2 text-dark">
+                    <img src="assets/icons/groups.png" alt="" width="35" height="35">
+                    <p class="ps-2 fw-bold fs-6">Groups</p>
+                </a>
+                <a class="left-item d-flex align-items-center p-2 text-dark">
+                    <img src="assets/icons/videos.png" alt="" width="35" height="35">
+                    <p class="ps-2 fw-bold fs-6">Videos</p>
+                </a>
+                <a class="left-item d-flex align-items-center p-2 text-dark">
+                    <img src="assets/icons/events.png" alt="" width="35" height="35">
+                    <p class="ps-2 fw-bold fs-6">Groups</p>
+                </a>
+                <a class="left-item d-flex align-items-center p-2 text-dark">
+                    <img src="assets/icons/feeds.png" alt="" width="35" height="35">
+                    <p class="ps-2 fw-bold fs-6">Feed</p>
+                </a>
+                <a class="left-item d-flex align-items-center p-2 text-dark">
+                    <img src="assets/icons/market.png" alt="" width="35" height="35">
+                    <p class="ps-2 fw-bold fs-6">Market Place</p>
+                </a>
+                <a class="left-item d-flex align-items-center p-2 text-dark">
+                    <img src="assets/icons/messenger.png" alt="" width="35" height="35">
+                    <p class="ps-2 fw-bold fs-6">Messenger</p>
+                </a>
+                <a class="left-item d-flex align-items-center p-2 text-dark">
+                    <img src="assets/icons/facebook-page.png" alt="" width="35" height="35">
+                    <p class="ps-2 fw-bold fs-6">Pages</p>
+                </a>
+            </div>
+            <hr style="border-color: #b9b7b7;">
+            <div class="shortcuts pb-5">
+                <header class="d-flex justify-content-between p-2">
+                    <p class=" fw-bold fs-6">Your Shortcuts</p>
+                    <a href="#">Edit</a>
+                </header>
+                <a class="left-item d-flex align-items-center p-2 text-dark">
+                    <img src="assets/images/shortcuts/short-1.jpg" alt="" width="35" height="35"
+                        style="border:1px solid #9e9e9e;border-radius: 10%;">
+                    <p class="ps-2 fw-bold fs-6">City University Programming Club(CUPC)</p>
+                </a>
+                <a class="left-item d-flex align-items-center p-2 text-dark">
+                    <img src="assets/images/shortcuts/short-2.jpg" alt="" width="35" height="35"
+                        style="border:1px solid #9e9e9e;border-radius: 10%;">
+                    <p class="ps-2 fw-bold fs-6">Laravel Experts Bangladesh</p>
+                </a>
+                <a class="left-item d-flex align-items-center p-2 text-dark">
+                    <img src="assets/images/shortcuts/short-3.jpg" alt="" width="35" height="35"
+                        style="border:1px solid #9e9e9e;border-radius: 10%;">
+                    <p class="ps-2 fw-bold fs-6">চাকরি প্রার্থী-Job Candidates</p>
+                </a>
+                <a class="left-item d-flex align-items-center p-2 text-dark">
+                    <img src="assets/images/shortcuts/short-4.jpg" alt="" width="35" height="35"
+                        style="border:1px solid #9e9e9e;border-radius: 10%;">
+                    <p class="ps-2 fw-bold fs-6">City University Family</p>
+                </a>
+                <a class="left-item d-flex align-items-center p-2 text-dark">
+                    <img src="assets/images/shortcuts/short-5.png" alt="" width="35" height="35"
+                        style="border:1px solid #9e9e9e;border-radius: 10%;">
+                    <p class="ps-2 fw-bold fs-6">Laravel Bangladesh Community</p>
+                </a>
+                <a class="left-item d-flex align-items-center p-2 text-dark">
+                    <img src="assets/images/shortcuts/short-5.png" alt="" width="35" height="35"
+                        style="border:1px solid #9e9e9e;border-radius: 10%;">
+                    <p class="ps-2 fw-bold fs-6">Laravel Bangladesh Community</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="post-upload shadow-sm">
+                <div class="d-flex align-items-center p-2 text-dark">
+                    <img src="assets/images/profile.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+                    <input type="text" placeholder="What's on your mind, Shah?" class="post-form">
+                </div>
+                <hr style="border-color: #b9b7b7;">
+                <div class="upload-items d-flex justify-content-between p-2">
+                    <button class="upload-button">
+                        <img src="assets/icons/live.png" alt="" class="pe-2" width="30px">
+                        <p>Live Video</p>
+                    </button>
+                    <button class="upload-button">
+                        <img src="assets/icons/gallery.png" alt="" class="pe-2" width="30px">
+                        <p> Photo/Video</p>
+                    </button>
+                    <button class="upload-button">
+                        <img src="assets/icons/feeling.png" alt="" class="pe-2" width="30px">
+                        <p> Feelings/activity</p>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Post View Part Start -->
+            <div class="post-view-wrapper p-2">
+                <div class="post-view-item">
+                    <div class="post-header d-flex justify-content-between align-items-center">
+                        <div class="post-owner d-flex align-items-center">
+                            <img src="assets/images/profile.jpg" alt="" width="40" height="40"
+                                style="border-radius: 50%;">
+                            <div class="owner-time">
+                                <p class="ps-2 fw-bold fs-6">Md. Shah Alam</p>
+                                <p class="ps-2" style="font-size: 14px;">9m ago</p>
+                            </div>
+                        </div>
+
+                        <div class="post-action">
+                            <a href="#" style="color: gray; font-size: 20px;"><i class="fa-solid fa-ellipsis"></i></a>
+                            <a href="#" class="ps-2" style="color: gray; font-size: 20px;"><i
+                                    class="fa-solid fa-xmark"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- post body start  -->
+                    <div class="post-body mt-4">
+                        <div class="post-text">
+                            <p>
+                                রাজধানীর শাহবাগ মোড়ে পুলিশের ব্যারিকেড ভেঙে দিয়েছেন কোটাবিরোধী শিক্ষার্থীরা। বৃহস্পতিবার
+                                (১১ জুলাই) বিকেল ৫টার দিকে ব্যারিকডে ভেঙে কারওয়ানবাজারমুখী হতে থাকেন আন্দোলনকারীরা
+                                বিস্তারিত : https://www.somoynews.tv/news/2024-07-11/7GX8MEGN
+                                কোটাবিরোধী আন্দোলনের সব খবর সবার আগে জানতে ক্লিক করুন:
+                                https://www.somoynews.tv/news/2024-07-11/2vVS1TNE
+                                #Antiquotamovement #somoytv
+                            </p>
+                        </div>
+                        <div class="post-image mt-2">
+                            <img src="assets/images/posts/post-1.jpg" alt="" class="w-100">
+                        </div>
+                        <hr style="border: #b9b7b7;">
+                    </div>
+                    <!-- post body end  -->
+
+                </div>
+            </div>
+            <!-- Post View Part End -->
+
+            <!-- 2nd Post Start -->
+            <div class="post-view-wrapper p-2">
+                <div class="post-view-item">
+                    <div class="post-header d-flex justify-content-between align-items-center">
+                        <div class="post-owner d-flex align-items-center">
+                            <img src="assets/images/profile.jpg" alt="" width="40" height="40"
+                                style="border-radius: 50%;">
+                            <div class="owner-time">
+                                <p class="ps-2 fw-bold fs-6">Md. Shah Alam</p>
+                                <p class="ps-2" style="font-size: 14px;">9m ago</p>
+                            </div>
+                        </div>
+
+                        <div class="post-action">
+                            <a href="#" style="color: gray; font-size: 20px;"><i class="fa-solid fa-ellipsis"></i></a>
+                            <a href="#" class="ps-2" style="color: gray; font-size: 20px;"><i
+                                    class="fa-solid fa-xmark"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- post body start  -->
+                    <div class="post-body mt-4">
+                        <div class="post-text">
+                            <p>
+                                AI With Me😎
+                                ভালোলাগছে 😊
+                                AI আমার মনের কথাগুলা বোঝে 😒
+                            </p>
+                        </div>
+                        <div class="post-image mt-2">
+                            <img src="assets/images/posts/post-2.jpg" alt="" class="w-100">
+                        </div>
+                        <hr style="border: #b9b7b7;">
+                    </div>
+                    <!-- post body end  -->
+
+                </div>
+            </div>
+            <!-- 2nd Post End -->
+        </div>
+
+        <div class="right-content">
+            <div class="left-item d-flex align-items-center mb-3">
+                <img src="assets/images/profile.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+                <p class="ps-4">Md. Shah Alam</p>
+            </div>
+            <div class="left-item d-flex align-items-center mb-3">
+                <img src="assets/images/profile.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+                <p class="ps-4">Md. Shah Alam</p>
+            </div>
+            <div class="left-item d-flex align-items-center mb-3">
+                <img src="assets/images/profile.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+                <p class="ps-4">Md. Shah Alam</p>
+            </div>
+            <div class="left-item d-flex align-items-center mb-3">
+                <img src="assets/images/profile.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+                <p class="ps-4">Md. Shah Alam</p>
+            </div>
+            <div class="left-item d-flex align-items-center mb-3">
+                <img src="assets/images/profile.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+                <p class="ps-4">Md. Shah Alam</p>
+            </div>
+            <div class="left-item d-flex align-items-center mb-3">
+                <img src="assets/images/profile.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+                <p class="ps-4">Md. Shah Alam</p>
+            </div>
+            <div class="left-item d-flex align-items-center mb-3">
+                <img src="assets/images/profile.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+                <p class="ps-4">Md. Shah Alam</p>
+            </div>
+            <div class="left-item d-flex align-items-center mb-3">
+                <img src="assets/images/profile.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+                <p class="ps-4">Md. Shah Alam</p>
+            </div>
+            <div class="left-item d-flex align-items-center mb-3">
+                <img src="assets/images/profile.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+                <p class="ps-4">Md. Shah Alam</p>
+            </div>
+            <div class="left-item d-flex align-items-center mb-3">
+                <img src="assets/images/profile.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+                <p class="ps-4">Md. Shah Alam</p>
+            </div>
+            <div class="left-item d-flex align-items-center mb-3">
+                <img src="assets/images/profile.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+                <p class="ps-4">Md. Shah Alam</p>
+            </div>
+            <div class="left-item d-flex align-items-center mb-3">
+                <img src="assets/images/profile.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+                <p class="ps-4">Md. Shah Alam</p>
+            </div>
+            <div class="left-item d-flex align-items-center mb-3">
+                <img src="assets/images/profile.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+                <p class="ps-4">Md. Shah Alam</p>
+            </div>
+            <div class="left-item d-flex align-items-center mb-3">
+                <img src="assets/images/profile.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+                <p class="ps-4">Md. Shah Alam</p>
+            </div>
+            <div class="left-item d-flex align-items-center mb-3">
+                <img src="assets/images/profile.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+                <p class="ps-4">Md. Shah Alam</p>
+            </div>
+            <div class="left-item d-flex align-items-center mb-3">
+                <img src="assets/images/profile.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+                <p class="ps-4">Md. Shah Alam</p>
+            </div>
+            <div class="left-item d-flex align-items-center mb-3">
+                <img src="assets/images/profile.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+                <p class="ps-4">Md. Shah Alam</p>
+            </div>
+            <div class="left-item d-flex align-items-center mb-3">
+                <img src="assets/images/profile.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+                <p class="ps-4">Md. Shah Alam</p>
+            </div>
+            <div class="left-item d-flex align-items-center mb-3">
+                <img src="assets/images/profile.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+                <p class="ps-4">Md. Shah Alam</p>
+            </div>
+            <div class="left-item d-flex align-items-center mb-3">
+                <img src="assets/images/profile.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+                <p class="ps-4">Md. Shah Alam</p>
+            </div>
+            <div class="left-item d-flex align-items-center mb-3">
+                <img src="assets/images/profile.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+                <p class="ps-4">Md. Shah Alam</p>
+            </div>
+            <div class="left-item d-flex align-items-center mb-3">
+                <img src="assets/images/profile.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+                <p class="ps-4">Md. Shah Alam</p>
+            </div>
+            <div class="left-item d-flex align-items-center mb-3">
+                <img src="assets/images/profile.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+                <p class="ps-4">Md. Shah Alam</p>
+            </div>
+            <div class="left-item d-flex align-items-center mb-3">
+                <img src="assets/images/profile.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+                <p class="ps-4">Md. Shah Alam</p>
+            </div>
+            <div class="left-item d-flex align-items-center mb-3">
+                <img src="assets/images/profile.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+                <p class="ps-4">Md. Shah Alam</p>
+            </div>
+            <div class="left-item d-flex align-items-center mb-3">
+                <img src="assets/images/profile.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+                <p class="ps-4">Md. Shah Alam</p>
+            </div>
+            <div class="left-item d-flex align-items-center mb-3">
+                <img src="assets/images/profile.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+                <p class="ps-4">Md. Shah Alam</p>
+            </div>
+            <div class="left-item d-flex align-items-center mb-3">
+                <img src="assets/images/profile.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+                <p class="ps-4">Md. Shah Alam</p>
+            </div>
+            <div class="left-item d-flex align-items-center mb-3">
+                <img src="assets/images/profile.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+                <p class="ps-4">Md. Shah Alam</p>
+            </div>
+            <div class="left-item d-flex align-items-center mb-3">
+                <img src="assets/images/profile.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+                <p class="ps-4">Md. Shah Alam</p>
+            </div>
+            <div class="left-item d-flex align-items-center mb-3">
+                <img src="assets/images/profile.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+                <p class="ps-4">Md. Shah Alam</p>
+            </div>
+            <div class="left-item d-flex align-items-center mb-3">
+                <img src="assets/images/profile.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+                <p class="ps-4">Md. Shah Alam</p>
+            </div>
+            <div class="left-item d-flex align-items-center mb-3">
+                <img src="assets/images/profile.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+                <p class="ps-4">Md. Shah Alam</p>
+            </div>
+            <div class="left-item d-flex align-items-center mb-3">
+                <img src="assets/images/profile.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+                <p class="ps-4">Md. Shah Alam</p>
+            </div>
+            <div class="left-item d-flex align-items-center mb-3">
+                <img src="assets/images/profile.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+                <p class="ps-4">Md. Shah Alam</p>
+            </div>
+            <div class="left-item d-flex align-items-center mb-3">
+                <img src="assets/images/profile.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+                <p class="ps-4">Md. Shah Alam</p>
+            </div>
+            <div class="left-item d-flex align-items-center mb-3">
+                <img src="assets/images/profile.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+                <p class="ps-4">Md. Shah Alam</p>
+            </div>
+            <div class="left-item d-flex align-items-center mb-3">
+                <img src="assets/images/profile.jpg" alt="" width="40" height="40" style="border-radius: 50%;">
+                <p class="ps-4">Md. Shah Alam</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
