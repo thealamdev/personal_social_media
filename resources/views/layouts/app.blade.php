@@ -36,6 +36,10 @@
                     <a href="#" class="d-flex justify-content-center align-items-center"><i class="las la-bars"></i></a>
                     <a href="#" class="d-flex justify-content-center align-items-center"><i class="fa-brands fa-facebook-messenger"></i></a>
                     <a href="#" class="d-flex justify-content-center align-items-center"><i class="las la-bell"></i></a>
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button type="submit">Logout</button>
+                    </form>
                     <img src="assets/images/profile.jpg" alt="profile" width="40px" height="40px" style="border-radius: 50%;">
                 </div>
             </nav>
